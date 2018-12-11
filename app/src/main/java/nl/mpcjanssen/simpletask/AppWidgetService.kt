@@ -107,6 +107,7 @@ data class AppWidgetRemoteViewsFactory(val intent: Intent) : RemoteViewsService.
                 is CompletedDateToken -> false
                 is DueDateToken -> false
                 is ThresholdDateToken -> false
+                is RecurrenceToken -> false
                 is ListToken -> !currentFilter.hideLists
                 is TagToken -> !currentFilter.hideTags
                 else -> true
